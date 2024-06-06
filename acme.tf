@@ -1,5 +1,5 @@
 provider "google" {
-  project = "iac-demo-proj"
+  project = "iamdemok8"
   region  = "us-east1"
 }
 
