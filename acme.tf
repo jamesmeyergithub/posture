@@ -16,7 +16,7 @@ resource "google_compute_network" "example_network"{
   delete_default_routes_on_create = false
   auto_create_subnetworks         = false
   routing_mode                    = "REGIONAL"
-  mtu                             = 100
+  mtu                             = 1000
   project                         = "iamdemok8"
 }
 
@@ -24,7 +24,7 @@ resource "google_container_node_pool" "example_node_pool" {
   name               = "example-node-pool-1"
   cluster            = "example-cluster-1"
   project            = "iamdemok8"
-  initial_node_count = 2
+  initial_node_count = 3
 
   node_config {
     preemptible  = true
@@ -39,5 +39,10 @@ resource "google_storage_bucket" "example_bucket" {
 
   project = "iamdemok8"
 
-  uniform_bucket_level_access = false
+  uniform_bucket_level_access = true
+
+  logging {
+    log_bucket   = "my-unique-logging-bucket" // Create a separate bucket for logs
+    log_object_prefix = "tf-logs/"             // Optional prefix for better structure
+  }
 }
