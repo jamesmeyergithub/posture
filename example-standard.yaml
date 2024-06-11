@@ -1,0 +1,46 @@
+name: organizations/693430662803/locations/global/postures/acme-standard
+state: ACTIVE
+policySets:
+- policies:
+  - constraint:
+      orgPolicyConstraintCustom:
+        customConstraint:
+          actionType: ALLOW
+          condition: "resource.initialNodeCount == 3"
+          description: Set initial node count to be exactly 3.
+          displayName: fixedNodeCount
+          methodTypes:
+          - CREATE
+          name: organizations/693430662803/customConstraints/custom.fixedNodeCount
+          resourceTypes:
+          - container.googleapis.com/NodePool
+        policyRules:
+        - enforce: true
+    policyId: fixedNodeCount
+  - constraint:
+      securityHealthAnalyticsCustomModule:
+        config:
+          customOutput: {}
+          description: Set MTU for a network to be exactly 1000.
+          predicate:
+            expression: "!(resource.mtu == 1000)"
+          recommendation: Only create networks whose MTU is 1000.
+          resourceSelector:
+            resourceTypes:
+            - compute.googleapis.com/Network
+          severity: HIGH
+        displayName: fixedMTU
+        moduleEnablementState: ENABLED
+    policyId: fixedMTU
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: BUCKET_POLICY_ONLY_DISABLED
+    policyId: bucket_policy_only_disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: BUCKET_LOGGING_DISABLED
+    policyId: bucket_logging_disabled
+  policySetId: policySet1
+  
