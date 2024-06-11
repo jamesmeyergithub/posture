@@ -39,5 +39,5 @@ resource "google_storage_bucket" "example_bucket" {
 
   project = "iamdemok8"
 
-  uniform_bucket_level_access = false
+  uniform_bucket_level_access = true
 }
