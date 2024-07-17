@@ -16,7 +16,7 @@ resource "google_compute_network" "example_network"{
   delete_default_routes_on_create = false
   auto_create_subnetworks         = false
   routing_mode                    = "REGIONAL"
-  mtu                             = 1000
+  mtu                             = 1526
   project                         = "iamdemok8"
 }
 
