@@ -24,7 +24,7 @@ resource "google_container_node_pool" "example_node_pool" {
   name               = "example-node-pool-1"
   cluster            = "example-cluster-1"
   project            = "iamdemok8"
-  initial_node_count = 3
+  initial_node_count = 2
 
   node_config {
     preemptible  = true
