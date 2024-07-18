@@ -16,7 +16,7 @@ resource "google_compute_network" "example_network"{
   delete_default_routes_on_create = false
   auto_create_subnetworks         = false
   routing_mode                    = "REGIONAL"
-  mtu                             = 1526
+  mtu                             = 1000
   project                         = "iamdemok8"
 }
 
@@ -24,7 +24,7 @@ resource "google_container_node_pool" "example_node_pool" {
   name               = "example-node-pool-1"
   cluster            = "example-cluster-1"
   project            = "iamdemok8"
-  initial_node_count = 2
+  initial_node_count = 3
 
   node_config {
     preemptible  = true
