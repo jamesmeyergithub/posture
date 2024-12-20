@@ -17,7 +17,7 @@ resource "google_compute_network" "example_network"{
   auto_create_subnetworks         = false
   routing_mode                    = "REGIONAL"
   mtu                             = 100
-  project                         = "iamdemok8"
+  project                         = "golden-demo-445000"
 }
 
 # resource "google_service_account" "default" {
@@ -27,6 +27,7 @@ resource "google_compute_network" "example_network"{
 
 resource "google_compute_instance" "default" {
   name         = "my-instance"
+  project = "golden-demo-445000"
   machine_type = "n2-standard-2"
   zone         = "us-central1-a"
 
@@ -70,7 +71,7 @@ resource "google_compute_instance" "default" {
 # resource "google_container_node_pool" "example_node_pool" {
 #   name               = "example-node-pool-1"
 #   cluster            = "example-cluster-1"
-#   project            = "iamdemok8"
+#   project            = "golden-demo-445000"
 #   initial_node_count = 1
 
 #   node_config {
@@ -84,7 +85,7 @@ resource "google_storage_bucket" "example_bucket" {
   location      = "EU"
   force_destroy = true
 
-  project = "iamdemok8"
+  project = "golden-demo-445000"
 
   uniform_bucket_level_access = true
 }
