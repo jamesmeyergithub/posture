@@ -65,7 +65,18 @@ resource "google_compute_instance" "default" {
     enable-oslogin = "FALSE"
   }
 
-  metadata_startup_script = "echo hi > /test.txt"
+  resource "google_sql_database_instance" "main" {
+  name             = "main-instance"
+  project          = "golden-demo-445000"
+  database_version = "POSTGRES_15"
+  region           = "us-central1"
+
+  settings {
+    # Second-generation instance tiers are based on the machine
+    # type. See argument reference below.
+    tier = "db-f1-micro"
+  }
+}
 
   # service_account {
   #   # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
