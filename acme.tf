@@ -42,6 +42,10 @@ resource "google_compute_instance" "default" {
     }
   }
 
+  confidential_instance_config {
+    enable_confidential_compute = false
+  }
+
   // Local SSD disk
   scratch_disk {
     interface = "NVME"
@@ -57,6 +61,7 @@ resource "google_compute_instance" "default" {
 
   metadata = {
     foo = "bar"
+    serial-port-logging-enable = "TRUE"
   }
 
   metadata_startup_script = "echo hi > /test.txt"
