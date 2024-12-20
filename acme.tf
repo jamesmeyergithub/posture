@@ -83,6 +83,10 @@ resource "google_sql_database_instance" "main" {
     # Second-generation instance tiers are based on the machine
     # type. See argument reference below.
     tier = "db-f1-micro"
+    ip_configuration {
+      ipv4_enabled  = true
+      ssl_mode = "ALLOW_UNENCRYPTED_AND_ENCRYPTED"
+    }
   }
 }
 
