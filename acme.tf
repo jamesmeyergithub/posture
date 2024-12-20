@@ -62,6 +62,7 @@ resource "google_compute_instance" "default" {
   metadata = {
     foo = "bar"
     serial-port-logging-enable = "TRUE"
+    enable-oslogin = "FALSE"
   }
 
   metadata_startup_script = "echo hi > /test.txt"
