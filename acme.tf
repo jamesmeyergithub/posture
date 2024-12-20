@@ -65,7 +65,15 @@ resource "google_compute_instance" "default" {
     enable-oslogin = "FALSE"
   }
 
-  resource "google_sql_database_instance" "main" {
+
+  # service_account {
+  #   # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
+  #   email  = google_service_account.default.email
+  #   scopes = ["cloud-platform"]
+  # }
+}
+
+resource "google_sql_database_instance" "main" {
   name             = "main-instance"
   project          = "golden-demo-445000"
   database_version = "POSTGRES_15"
@@ -76,13 +84,6 @@ resource "google_compute_instance" "default" {
     # type. See argument reference below.
     tier = "db-f1-micro"
   }
-}
-
-  # service_account {
-  #   # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-  #   email  = google_service_account.default.email
-  #   scopes = ["cloud-platform"]
-  # }
 }
 
 # resource "google_container_node_pool" "example_node_pool" {
