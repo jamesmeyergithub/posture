@@ -114,6 +114,7 @@ resource "google_storage_bucket" "example_bucket" {
 
 resource "google_bigquery_dataset" "public" {
   dataset_id                  = "public"
+  project            =  "golden-demo-445000" 
   friendly_name               = "test"
   description                 = "This dataset is public"
  # location                    = "EU"
