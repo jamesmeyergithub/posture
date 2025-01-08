@@ -1,0 +1,390 @@
+categories:
+- GCP
+description: Posture Template to make your workload secure and CIS 2.0 compliant
+name: organizations/693430662803/locations/global/postureTemplates/cis_2_0
+policySets:
+- description: CIS_2_0 SHA modules that new customers can automatically enable.
+  policies:
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: ACCESS_TRANSPARENCY_DISABLED
+    policyId: Access transparency disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: ADMIN_SERVICE_ACCOUNT
+    policyId: Admin service account
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: ESSENTIAL_CONTACTS_NOT_CONFIGURED
+    policyId: Essential contacts not configured
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: API_KEY_APIS_UNRESTRICTED
+    policyId: API key APIs unrestricted
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: API_KEY_APPS_UNRESTRICTED
+    policyId: API key APPs unrestricted
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: API_KEY_EXISTS
+    policyId: API key exists
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: API_KEY_NOT_ROTATED
+    policyId: API key not rotated
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: AUDIT_CONFIG_NOT_MONITORED
+    policyId: Audit config not monitored
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: AUDIT_LOGGING_DISABLED
+    policyId: Audit logging disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: AUTO_BACKUP_DISABLED
+    policyId: Auto backup disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: BIGQUERY_TABLE_CMEK_DISABLED
+    policyId: BigQuery table CMEK disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: BUCKET_IAM_NOT_MONITORED
+    policyId: Bucket IAM not monitored
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: BUCKET_POLICY_ONLY_DISABLED
+    policyId: Bucket policy only disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: CLOUD_ASSET_API_DISABLED
+    policyId: Cloud asset API disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: COMPUTE_PROJECT_WIDE_SSH_KEYS_ALLOWED
+    policyId: Compute project wide SSH keys allowed
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: COMPUTE_SERIAL_PORTS_ENABLED
+    policyId: Compute serial port enabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: CONFIDENTIAL_COMPUTING_DISABLED
+    policyId: Confidential computing disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: CUSTOM_ROLE_NOT_MONITORED
+    policyId: Custom role not monitored
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: DATAPROC_CMEK_DISABLED
+    policyId: Dataproc CMEK disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: DATASET_CMEK_DISABLED
+    policyId: Dataset CMEK disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: DEFAULT_NETWORK
+    policyId: Default network
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: DEFAULT_SERVICE_ACCOUNT_USED
+    policyId: Default service account used
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: DISK_CSEK_DISABLED
+    policyId: Disk CSEK disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: DNS_LOGGING_DISABLED
+    policyId: DNS logging disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: DNSSEC_DISABLED
+    policyId: DNSSEC disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: FIREWALL_NOT_MONITORED
+    policyId: Firewall not monitored
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: VPC_FLOW_LOGS_SETTINGS_NOT_RECOMMENDED
+    policyId: VPC flow logs settings not recommended
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: FULL_API_ACCESS
+    policyId: Full API access
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: INSTANCE_OS_LOGIN_DISABLED
+    policyId: Instance OS login disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: IP_FORWARDING_ENABLED
+    policyId: IP forwarding enabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: KMS_KEY_NOT_ROTATED
+    policyId: KMS key not rotated
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: KMS_PROJECT_HAS_OWNER
+    policyId: KMS project has owner
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: KMS_PUBLIC_KEY
+    policyId: KMS public key
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: KMS_ROLE_SEPARATION
+    policyId: KMS role separation
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: LEGACY_NETWORK
+    policyId: Legacy network
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: LOCKED_RETENTION_POLICY_NOT_SET
+    policyId: Locked retention policy not set
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: LOAD_BALANCER_LOGGING_DISABLED
+    policyId: Load balancer logging disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: LOG_NOT_EXPORTED
+    policyId: Log not exported
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: MFA_NOT_ENFORCED
+    policyId: MFA not enforced
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: NETWORK_NOT_MONITORED
+    policyId: Network not monitored
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: NON_ORG_IAM_MEMBER
+    policyId: Non org IAM member
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: OPEN_RDP_PORT
+    policyId: Open RDP port
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: OPEN_SSH_PORT
+    policyId: Open SSH port
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: OS_LOGIN_DISABLED
+    policyId: OS login disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: OVER_PRIVILEGED_SERVICE_ACCOUNT_USER
+    policyId: Over privileged service account user
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: OWNER_NOT_MONITORED
+    policyId: Owner not monitored
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: PUBLIC_BUCKET_ACL
+    policyId: Public bucket ACL
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: PUBLIC_DATASET
+    policyId: Public dataset
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: PUBLIC_IP_ADDRESS
+    policyId: Public IP address
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: PUBLIC_SQL_INSTANCE
+    policyId: Public SQL instance
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: ROUTE_NOT_MONITORED
+    policyId: Route not monitored
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: RSASHA1_FOR_SIGNING
+    policyId: RSASHA1 for signing
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SERVICE_ACCOUNT_KEY_NOT_ROTATED
+    policyId: Service account key not rotated
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SERVICE_ACCOUNT_ROLE_SEPARATION
+    policyId: Service account role separation
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SHIELDED_VM_DISABLED
+    policyId: Shielded VM disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_CONTAINED_DATABASE_AUTHENTICATION
+    policyId: SQL contained database authentication
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_CROSS_DB_OWNERSHIP_CHAINING
+    policyId: SQL cross DB ownership chaining
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_EXTERNAL_SCRIPTS_ENABLED
+    policyId: SQL external scripts enabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_INSTANCE_NOT_MONITORED
+    policyId: SQL instnance not monitored
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_LOCAL_INFILE
+    policyId: SQL local infile
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_LOG_CONNECTIONS_DISABLED
+    policyId: SQL log connections disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_LOG_DISCONNECTIONS_DISABLED
+    policyId: SQL log disconnections disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_LOG_ERROR_VERBOSITY
+    policyId: SQL log error verbosity
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_LOG_MIN_DURATION_STATEMENT_ENABLED
+    policyId: SQL log min duration statement enabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_LOG_MIN_ERROR_STATEMENT_SEVERITY
+    policyId: SQL log min error statement severity
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_LOG_MIN_MESSAGES
+    policyId: SQL log min messages
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_LOG_STATEMENT
+    policyId: SQL log statement
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_NO_ROOT_PASSWORD
+    policyId: SQL no root password
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_PUBLIC_IP
+    policyId: SQL public IP
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_REMOTE_ACCESS_ENABLED
+    policyId: SQL remote access enabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_SKIP_SHOW_DATABASE_DISABLED
+    policyId: SQL skip show database disabled
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_TRACE_FLAG_3625
+    policyId: SQL trace flag 3625
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_USER_CONNECTIONS_CONFIGURED
+    policyId: SQL user connection configured
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: SQL_USER_OPTIONS_CONFIGURED
+    policyId: SQL user options configured
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: USER_MANAGED_SERVICE_ACCOUNT_KEY
+    policyId: User managed service account key
+  - constraint:
+      securityHealthAnalyticsModule:
+        moduleEnablementState: ENABLED
+        moduleName: WEAK_SSL_POLICY
+    policyId: Weak SSL policy
+  policySetId: CIS_2_0 detective policy set
+revisionId: v.1.0
+state: ACTIVE
