@@ -28,7 +28,7 @@ resource "google_compute_network" "example_network"{
 resource "google_compute_instance" "default" {
   name         = "my-instance"
   project = "golden-demo-445000"
-  machine_type = "n2-standard-2"
+  machine_type = "n2d-standard-2"
   zone         = "us-central1-a"
 
   tags = ["foo", "bar"]
@@ -78,6 +78,7 @@ resource "google_sql_database_instance" "main" {
   project          = "golden-demo-445000"
   database_version = "POSTGRES_15"
   region           = "us-central1"
+  deletion_protection = false
 
   settings {
     # Second-generation instance tiers are based on the machine
@@ -103,7 +104,7 @@ resource "google_sql_database_instance" "main" {
 # }
 
 resource "google_storage_bucket" "example_bucket" {
-  name          = "example-bucket-1"
+  name          = "example-bucket-1dsjafkldsaf"
   location      = "EU"
   force_destroy = true
 
@@ -123,5 +124,9 @@ resource "google_bigquery_dataset" "public" {
   access {
     role   = "READER"
     iam_member =  "allUsers"
+  }
+  access {
+    role          = "OWNER"
+    user_by_email = "admin@jamesmeyer.altostrat.com"
   }
 }
